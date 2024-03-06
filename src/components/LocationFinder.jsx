@@ -5,7 +5,7 @@ const LocationFinder = () => {
     const [ip, setIp] = useState("");
     const [state, setState] = useState("");
     const [region, setRegion] = useState("");
-
+    
     useEffect(() => {
         const getIp = async () => {
             const res = await axios.get("https://api.ipify.org/?format=json");
