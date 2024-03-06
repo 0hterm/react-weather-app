@@ -1,5 +1,6 @@
 import './App.css';
 import LocationFinder from './components/LocationFinder';
+import Forecast from './components/Forecast';
 
 function App() {
   
@@ -9,6 +10,7 @@ function App() {
       <h2>Local Weather ⛅</h2>
       <p>Let&apos;s take a look at this weeks forecast.</p>
       <LocationFinder />
+      <Forecast />
 
     </div>
   )

@@ -24,11 +24,12 @@ const LocationFinder = () => {
         
         getIp();
 
-        const getLocation = async () => {
+        const getLocation = async (ip) => {
             const res = await axios.get(`http://www.geoplugin.net/json.gp?ip=${ip}`);
-            if (res.geoplugin_status == 200) {
-                setState(res.geoplugin_state);
-                setRegion(res.geoplugin_region);
+            console.log(res);
+            if (res.data.geoplugin_status == 200) {
+                setState(res.data.geoplugin_city);
+                setRegion(res.data.geoplugin_region);
             } else {
                 return (
                     <div className='LocationFinder'>
@@ -48,11 +49,14 @@ const LocationFinder = () => {
             }
 
         }
-    }, []);
+
+        getLocation(ip);
+
+    });
     
     return (
         <div className='LocationFinder'>
-            <p>IP: {ip}</p>
+            <p>Location: {state}, {region}</p>
         </div>
     )
     
