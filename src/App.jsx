@@ -2,8 +2,7 @@ import './App.css';
 import LocationFinder from './components/LocationFinder';
 import Forecast from './components/Forecast';
 
-function App() {
-  
+function App() {  
 
   return (
     <div className='App'>
