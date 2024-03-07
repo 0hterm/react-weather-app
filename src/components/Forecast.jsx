@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import Card from './Card';
+
 
 
 const Forecast = () => {
@@ -8,6 +10,7 @@ const Forecast = () => {
     const [lat, setLat] = useState("");
     const [long, setLong] = useState("");
     let forecast = [];
+    let currTime = new Date().toTimeString();
 
     useEffect(() => {
         const getIp = async () => {
@@ -58,14 +61,49 @@ const Forecast = () => {
             }
         }
         callAPI(lat, long);
-        console.log(forecast);
-})
 
+        const getHour = () => {
+            let hour = parseInt(currTime.split(":")[0]);
+            return hour;
+        }
+        const hour = getHour();
+    
+        const getTimeSpread = (hour) => {
+            let spread = [];
+            if (hour > 16) {
+                let diff = Math.abs(24 - (hour+8));
+                hour -= diff;         
+            }
+            for (let i = hour; i < hour+8; i++) {
+                spread.push(i);
+            }
+            return spread;
+        }
+        const spread = getTimeSpread(hour);
+        console.log(hour);
+        console.log(spread);
+    
+        const spread_data = [];
+        const getForecast = (forecast,spread) => {
+            for (const data of forecast) {
+                console.log(data);
+                if (data.time[11] + data.time[12] in spread) {
+                    spread_data.push(data);
+                }
+            }
+        }
+        getForecast(forecast,spread);
+        console.log(spread_data);
+    });
+
+    
+    
     return (
         <div className="Forecast">
-
+            
         </div>
     )
-}
+    
+};
 
 export default Forecast;
