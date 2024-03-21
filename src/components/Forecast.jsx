@@ -63,6 +63,8 @@ const Forecast = () => {
             }
         }
         setForecast(new_forecast);
+        const spread = getTimeSpread(hour);
+        getForecast(new_forecast,spread);
     }
 
     const getTimeSpread = (hour) => {
@@ -93,11 +95,6 @@ const Forecast = () => {
             const ip = await getIp();
             const location = await getLocation(ip);
             await callAPI(location.lat, location.long);
-            const spread = getTimeSpread(hour);
-            getForecast(forecast,spread);
-            console.log(forecast);
-            console.log(spread);
-            console.log(spreadData);
         }
         fetchData();
     }, []);
