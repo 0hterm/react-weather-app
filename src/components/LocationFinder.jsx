@@ -21,7 +21,6 @@ const LocationFinder = () => {
             }
             
         };
-        
         getIp();
 
         const getLocation = async (ip) => {
@@ -49,10 +48,8 @@ const LocationFinder = () => {
             }
 
         }
-
         getLocation(ip);
-
-    });
+    }, []);
     
     return (
         <div className='LocationFinder'>
