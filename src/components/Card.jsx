@@ -1,5 +1,3 @@
-
-
 const Card = ({ data }) => {
 
     return(
