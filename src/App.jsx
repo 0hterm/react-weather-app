@@ -10,7 +10,6 @@ function App() {
       <h3 id="description">Let&apos;s take a look at today's forecast.</h3>
       <LocationFinder />
       <Forecast />
-
     </div>
   )
 }
