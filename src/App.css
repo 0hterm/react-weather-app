@@ -17,6 +17,7 @@
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.596);
   text-align: center;
   position: relative;
+  width: 150px;
 }
 
 
@@ -45,14 +46,22 @@
 
 .main-icons {
   width: 100px;
-  padding: 40px;
-  filter: drop-shadow(0px 0px 10px rgb(0, 0, 0));
+  padding: 5px;
+  filter: drop-shadow(0px 0px 10px rgba(100, 100, 100, 0.705));
+  background-color: #f3f3f379;
+  border-radius: 1rem;
+  margin: 0 auto;
 }
 
 .conditions {
   font-size: small;
-  margin-bottom: 1.5rem;
-  filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.692));
+  filter: drop-shadow(0px 0px 6px rgba(100, 100, 100, 0.705));
+  background-color: #f3f3f379;
+  border-radius: 1rem;
+  width: 88%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: .75rem;
 }
 
 .App {
@@ -65,11 +74,12 @@
 .card-tile {
   display: flex;
   flex-direction: column;
-  padding-left: .55rem;
-  padding-right: .55rem;
-  padding-bottom: 1rem;
-  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.808));
-  
+  filter: drop-shadow(0px 0px 5px rgba(100, 100, 100, 0.705));
+  background-color: #f3f3f379;
+  border-radius: 1rem;
+  margin: .5rem;
+  padding: .25rem;
+  flex-grow: 1;
   > p {
     margin: 0;
   }
@@ -94,14 +104,17 @@
   font-weight: bold;
   font-size: 1.5rem;
   color: black;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.493));
 }
 
 #title {
   color: #106cd6;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.493));
 }
 
 #description {
   color: #106cd6;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.493));
 }
 
 .clear, .clear- {
@@ -109,5 +122,35 @@
 }
 
 .times {
-  filter: drop-shadow(0px 0px 6px rgb(0, 0, 0));
+  background-color: #f3f3f379;
+  border-radius: 1rem;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.493));
+}
+
+.patchy-light-rain, .patchy-light-rain-, .patchy-rain-nearby, .patchy-rain-nearby-, .light-rain, .light-rain- {
+  background-image: url('https://www.leitrimobserver.ie/resizer/640/-1/true/2023_11_27/clouds-8029036_1280_%282%29-1701077546611.jpg--mostly_cloudy_weather_with_patchy_light_rain_this_monday.jpg?1701077546648');
+  background-position: 0 -30px;
+}
+
+.moderate-rain-at-times, .moderate-rain-at-times- {
+  background-image: url('https://media.istockphoto.com/id/453684353/photo/rain-at-the-fields.jpg?s=612x612&w=0&k=20&c=JXVnwl83Oifw3ook_yhZy9IIeHm2Ey6PrxgZUK1_vZs=');
+  background-position: 0;
+}
+
+.moderate-rain, .moderate-rain- {
+  background-image: url('https://i.pinimg.com/736x/18/60/75/186075bcc9258e646ee74f84b411839e.jpg');
+}
+
+.patchy-light-rain-with-thunder, .patchy-light-rain-with-thunder- {
+  background-image: url('https://images.fineartamerica.com/images-medium-large-5/lightning-and-cloudy-sky-don-farrall.jpg');
+  background-position: -356px -70px;
+}
+
+.sunny, .sunny- {
+  background-image: url('https://i.pinimg.com/originals/e1/3a/4d/e13a4d737425141353603f7a3edb73cd.jpg');
+  background-position: 5050px -160px;
 }
