@@ -1,4 +1,4 @@
-# Full-Stack Weather App 🌤️
+# React Weather App 🌤️
 
 ### Screenshot
 <img src="https://github.com/0hterm/full-stack-weather-app/assets/140545108/caea1b19-4ff8-4650-840a-8326c9995749" alt="image" />
