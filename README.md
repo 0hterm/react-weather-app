@@ -1,8 +1,13 @@
-# React + Vite
+# Full-Stack Weather App 🌤️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Screenshot
+<img src="https://github.com/0hterm/full-stack-weather-app/assets/140545108/caea1b19-4ff8-4650-840a-8326c9995749" alt="image" />
 
-Currently, two official plugins are available:
+### What's the App?
+This web-app will display an 8-hour forecast specific to the user's location. If the user's current local time is past 16:00 (4:00 PM), the user will instead see a forecast spread from 16:00 to 23:00. This limitation is implemented by weatherAPI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### How does it work?
+When the user loads the page, their location is found by IP and returned as longitude and latitude values. These values are plugged into the weather api which then returns extensive information regarding local weather in the form of JSON data. This JSON data is then used in development.
+
+
+
