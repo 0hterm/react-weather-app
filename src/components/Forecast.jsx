@@ -32,7 +32,7 @@ const Forecast = () => {
 
     const callAPI = async (lat, long) => {
         const base_url = "http://api.weatherapi.com/v1/forecast.json";
-        const token = "e2dd6a4c29d6401fb8a34747240603";
+        const token = "YOUR WEATHERAPI TOKEN HERE";
         const full_url = `${base_url}?key=${token}&q=${lat},${long}`;
 
         const res = await axios.get(full_url);
