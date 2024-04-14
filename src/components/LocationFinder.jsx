@@ -24,11 +24,11 @@ const LocationFinder = () => {
         getIp();
 
         const getLocation = async (ip) => {
-            const res = await axios.get(`http://www.geoplugin.net/json.gp?ip=${ip}`);
+            const res = await axios.get(`https://ipapi.co/${ip}/json/`);
             console.log(res);
-            if (res.data.geoplugin_status == 200) {
-                setState(res.data.geoplugin_city);
-                setRegion(res.data.geoplugin_region);
+            if (res.data) {
+                setState(res.data.city);
+                setRegion(res.data.region);
             } else {
                 return (
                     <div className='LocationFinder'>

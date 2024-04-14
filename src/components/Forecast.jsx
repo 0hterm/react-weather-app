@@ -24,15 +24,15 @@ const Forecast = () => {
     };
 
     const getLocation = async (ip) => {
-        const res = await axios.get(`http://www.geoplugin.net/json.gp?ip=${ip}`);
-        if (res.data.geoplugin_status == 200) {
-            return { lat: res.data.geoplugin_latitude, long: res.data.geoplugin_longitude };
+        const res = await axios.get(`https://ipapi.co/${ip}/json/`);
+        if (res.data) {
+            return { lat: res.data.latitude, long: res.data.longitude };
         }
     }
 
     const callAPI = async (lat, long) => {
         const base_url = "http://api.weatherapi.com/v1/forecast.json";
-        const token = "YOUR WEATHERAPI TOKEN HERE";
+        const token = "db71452394394660a37180212241204";
         const full_url = `${base_url}?key=${token}&q=${lat},${long}`;
 
         const res = await axios.get(full_url);
