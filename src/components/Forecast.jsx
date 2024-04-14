@@ -31,7 +31,7 @@ const Forecast = () => {
     }
 
     const callAPI = async (lat, long) => {
-        const base_url = "http://api.weatherapi.com/v1/forecast.json";
+        const base_url = "https://api.weatherapi.com/v1/forecast.json";
         const token = "db71452394394660a37180212241204";
         const full_url = `${base_url}?key=${token}&q=${lat},${long}`;
 
